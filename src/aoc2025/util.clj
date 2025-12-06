@@ -10,5 +10,6 @@
 
 (defn slurp-input
   []
-  ; the trim is because when I copy paste into emacs and save it adds a newline at the end
-  (str/trimr (slurp (str "resources/day" (day)))))
+  ;; the trim is because when I copy paste into emacs and save
+  ;; it adds a newline at the end
+  (str/trim-newline (slurp (str "resources/day" (day)))))
