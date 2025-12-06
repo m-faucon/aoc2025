@@ -31,6 +31,13 @@
 ;; input intervals are consumed one by one and the invariant
 ;; holds after each step
 
+;; Re reading the next day: this could have been made much simpler
+;; by at each step only recording the intervals intersecting the new one
+;; and the min / max, rather than the details of how they intersect
+;; oh well
+
+;; also, sorting first would help performance but it's instant anyways
+ 
 (defn intersection-type
   [[Im IM] [Jm JM]]
   (cond
